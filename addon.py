@@ -74,7 +74,6 @@ def play_channel(channel,wallop_server):
         link = "http://%s:8888/channels/%s.m3u8" % (wallop_server, channel)
         xbmc.Player().play(link)
 
-
 handle = int(sys.argv[1])
 wallop_server = xbmcplugin.getSetting(handle,'wallop')
         
