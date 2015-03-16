@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <setting label="32011" type="text" id="wallop" default="" />
+  <setting type="sep" />
+  <setting label="32053" type="labelenum" id="resolution" values="640x360|640x480|720x480|1280x720|1920x1080" default="1280x720" />
+  <setting label="32065" type="labelenum" id="bitrate" values="320k|720k|1000k|2000k|3000k|4000k|6000k|8000k" default="3000k" />
+</settings>
