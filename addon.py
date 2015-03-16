@@ -6,7 +6,6 @@ import xbmcplugin
 import xbmcaddon
 import httplib
 import json
-import time
 import urllib
 import urlparse
 
@@ -28,8 +27,8 @@ def show_channels(wallop_server):
         addon.openSettings()
         
     # Fetch Channel Lineup
-    conn = httplib.HTTPConnection('172.16.2.53', '8888', timeout=10)
-    url = "/channels"
+    conn = httplib.HTTPConnection(wallop_server, '8888', timeout=15)
+    url = '/channels'
     headers = {"Accept":"application/json"}
     conn.request("GET", url, '', headers)
     response = conn.getresponse()
@@ -49,7 +48,7 @@ def play_channel(channel,wallop_server):
     bitrate = xbmcplugin.getSetting(handle,'bitrate')
     
     # Tune Channel
-    conn = httplib.HTTPConnection(wallop_server, 8888, timeout=10)
+    conn = httplib.HTTPConnection(wallop_server, 8888, timeout=15)
     url = "/channels/%s/tune?resolution=%s&bitrate=%s" % (channel, resolution, bitrate)
     conn.request("POST", url)
     conn.close
@@ -57,7 +56,7 @@ def play_channel(channel,wallop_server):
     # Keep Checking status of tuning until it returns ready
     while True:
 
-        conn = httplib.HTTPConnection(wallop_server,'8888', timeout=10)
+        conn = httplib.HTTPConnection(wallop_server,'8888', timeout=15)
         url = "/channels/%s/status" % channel
         conn.request("GET", url)
         response = conn.getresponse()
@@ -65,7 +64,7 @@ def play_channel(channel,wallop_server):
         data = json.load(response)
     
         if data["ready"] != True:
-            time.sleep(5)
+            xbmc.sleep(5000)
         else:
             break
 
