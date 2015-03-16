@@ -66,7 +66,6 @@ def play_channel(channel,wallop_server):
     
     
         if data["ready"] != True:
-            print "Channel no ready"
             time.sleep(5)
         else:
             break
