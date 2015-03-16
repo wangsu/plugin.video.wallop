@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
-  <!-- general settings -->
   <string id="32011">Wallop Server Address</string>
   <string id="32053">Stream Resolution</string>
   <string id="32065">Stream Bitrate</string>

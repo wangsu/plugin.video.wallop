@@ -64,7 +64,6 @@ def play_channel(channel,wallop_server):
         conn.close
         data = json.load(response)
     
-    
         if data["ready"] != True:
             time.sleep(5)
         else:
@@ -83,4 +82,3 @@ if channel == "":
     show_channels(wallop_server)
 else:
     play_channel(channel, wallop_server)
-
