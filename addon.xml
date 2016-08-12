@@ -2,7 +2,7 @@
 <addon id="plugin.video.wallop"
     name="Wallop HDHomerun"
     version="0.0.3"
-    provider-name="wangsu">
+    provider-name="wangsu | dwright134">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
