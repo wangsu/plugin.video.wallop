@@ -1,5 +1,5 @@
 # plugin.video.wallop
-Wallop addon for XBMC/Kodi
+Wallop addon for Kodi/XBMC
 
 forked from dwright134/plugin.video.wallop (https://github.com/dwright134/plugin.video.wallop)
 
