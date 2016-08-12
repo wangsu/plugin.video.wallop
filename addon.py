@@ -28,7 +28,7 @@ def show_channels(wallop_server):
         
     # Fetch Channel Lineup
     conn = httplib.HTTPConnection(wallop_server, '8888', timeout=15)
-    url = '/channels'
+    url = '/channels?type=favorites'
     headers = {"Accept":"application/json"}
     conn.request("GET", url, '', headers)
     response = conn.getresponse()
